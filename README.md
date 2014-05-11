@@ -1,2 +1,1 @@
-gulp-jst_compiler
-=================
+gulp-jst
