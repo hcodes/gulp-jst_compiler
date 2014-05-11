@@ -1,0 +1,26 @@
+{
+  "name": "gulp-jst",
+  "version": "0.5.0",
+  "description": "jst for Gulp",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hcodes/gulp-jst.git"
+  },
+  "keywords": [
+    "gulpjst",
+    "gulp",
+    "jst_compiler",
+    "jst"
+  ],
+  "author": {
+    "name": "Denis Seleznev"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "jst_compiler": "^2.2.9",
+    "gulp-util": "^2.2.14",
+    "through2": "^0.4.0"
+  }
+}
