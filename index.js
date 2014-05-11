@@ -16,7 +16,7 @@ module.exports = function () {
         }
 
         if (file.isStream()) {
-            this.emit('error', new PluginError('gulp-jst', 'Streaming not supported'));
+            this.emit('error', new PluginError('gulp-jst_compiler', 'Streaming not supported'));
             return next();
         }
 
