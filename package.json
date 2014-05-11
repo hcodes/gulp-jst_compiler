@@ -1,11 +1,11 @@
 {
-  "name": "gulp-jst",
-  "version": "0.5.0",
-  "description": "jst for Gulp",
+  "name": "gulp-jst_compiler",
+  "version": "0.5.1",
+  "description": "Compile jst templates using gulp.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/hcodes/gulp-jst.git"
+    "url": "git://github.com/hcodes/gulp-jst_compiler.git"
   },
   "keywords": [
     "gulpjst",
