@@ -27,5 +27,5 @@ gulp.task('default', ['jst']);
 
 ## Options
 ```javascript
-    .pipe(jst('all.jst.js', {withoutKernel: true})) // compile without jst-kernel 
+.pipe(jst('all.jst.js', {withoutKernel: true})) // compile without jst-kernel 
 ```
