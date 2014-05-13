@@ -1,7 +1,7 @@
 gulp-jst_compiler
 =================
 
-A JST compiler plugin for Gulp
+A [JST compiler](https://github.com/hcodes/jst) plugin for Gulp
 
 [![Build Status](https://travis-ci.org/hcodes/gulp-jst_compiler.png?branch=master)](https://travis-ci.org/hcodes/gulp-jst_compiler)
 
@@ -22,4 +22,10 @@ gulp.task('jst', function () {
 });
 
 gulp.task('default', ['jst']);
+```
+
+
+## Options
+```javascript
+    .pipe(jst('all.jst.js', {withoutKernel: true})) // compile without jst-kernel 
 ```

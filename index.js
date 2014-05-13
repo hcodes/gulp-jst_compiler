@@ -1,33 +1,55 @@
 var jst = require('jst_compiler');
 
-var through2 = require('through2');
-var path = require('path');
-
+var through = require('through');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
 
-module.exports = function () {
-    function transform (file, enc, next) {
-        var self = this;
+var path = require('path');
+var File = gutil.File;
 
+module.exports = function (fileName, options) {
+    if (!fileName) {
+        throw new PluginError('gulp-jst_compiler', 'Missing fileName option for gulp-jst_compiler');
+    }
+
+    if (!options) {
+        options = {};   
+    }
+
+    var buffer = [];
+    var firstFile = null;
+
+    function bufferContents(file) {
         if (file.isNull()) {
-            this.push(file); // pass along
-            return next();
+            return; 
         }
 
         if (file.isStream()) {
-            this.emit('error', new PluginError('gulp-jst_compiler', 'Streaming not supported'));
-            return next();
+            return this.emit('error', new PluginError('gulp-jst_compiler', 'Streaming not supported'));
         }
 
-        var str = file.contents.toString('utf8');
-        var tmpl = jst.compileText(str, file.path);
-
-        file.contents = new Buffer(tmpl);
-        self.push(file);
-
-        next();
+        buffer.push(file.contents);
     }
 
-    return through2.obj(transform);
+    function endStream() {
+        if (!buffer.length) {
+            return this.emit('end');
+        }
+
+        var tmpl = jst.compileText(buffer.join('\n'), options);
+
+        var joinedContents = new Buffer(tmpl, 'utf8');
+        var joinedPath = path.join(firstFile.base, fileName);
+        var joinedFile = new File({
+            cwd: firstFile.cwd,
+            base: firstFile.base,
+            path: joinedPath,
+            contents: joinedContents
+        });
+
+        this.emit('data', joinedFile);
+        this.emit('end');
+    }
+
+    return through(bufferContents, endStream);
 };

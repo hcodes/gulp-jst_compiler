@@ -1,7 +1,10 @@
 {
   "name": "gulp-jst_compiler",
-  "version": "0.5.1",
+  "version": "0.7.0",
   "description": "Compile jst templates using gulp.",
+  "author": {
+    "name": "Denis Seleznev <hcodes@yandex.ru>"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -13,14 +16,20 @@
     "jst_compiler",
     "jst"
   ],
-  "author": {
-    "name": "Denis Seleznev"
-  },
-  "license": "MIT",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 0.10"
+  },  
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hcodes/gulp-jst_compiler/blob/master/LICENSE"
+    }
+  ],
   "readmeFilename": "README.md",
   "dependencies": {
     "jst_compiler": "^2.2.9",
-    "gulp-util": "^2.2.14",
-    "through2": "^0.4.0"
+    "through": "^2.3.4",
+    "gulp-util": "^2.2.5"
   }
 }
