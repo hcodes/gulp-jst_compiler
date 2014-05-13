@@ -14,13 +14,10 @@ npm install gulp-jst_compiler --save-dev
 ## Usage
 ```javascript
 var jst = require('gulp-jst_compiler');
-var concat = require('gulp-concat');
-var path = require('path');
 
 gulp.task('jst', function () {
   gulp.src('./jst/**/*.jst')
-    .concat('all.jst.js')
-    .pipe(jst())
+    .pipe(jst('all.jst.js'))
     .pipe(gulp.dest('./public/js'));
 });
 
