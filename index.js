@@ -27,6 +27,10 @@ module.exports = function (fileName, options) {
         if (file.isStream()) {
             return this.emit('error', new PluginError('gulp-jst_compiler', 'Streaming not supported'));
         }
+        
+        if (!firstFile) {
+            firstFile = file;
+        }
 
         buffer.push(file.contents);
     }
