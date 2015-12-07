@@ -1,6 +1,6 @@
 {
   "name": "gulp-jst_compiler",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Compile jst templates using gulp.",
   "author": {
     "name": "Denis Seleznev <hcodes@yandex.ru>"
@@ -18,7 +18,7 @@
   ],
   "engineStrict": true,
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 0.12"
   },  
   "licenses": [
     {
@@ -28,7 +28,7 @@
   ],
   "readmeFilename": "README.md",
   "dependencies": {
-    "jst_compiler": "^2.2.9",
+    "jst_compiler": "3.x",
     "through": "^2.3.4",
     "gulp-util": "^2.2.5"
   }
