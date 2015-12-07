@@ -16,7 +16,7 @@ npm install gulp-jst_compiler --save-dev
 var jst = require('gulp-jst_compiler');
 
 gulp.task('jst', function () {
-  gulp.src('./jst/**/*.jst')
+  gulp.src('./templates/**/*.jst.html')
     .pipe(jst('all.jst.js'))
     .pipe(gulp.dest('./public/js'));
 });
