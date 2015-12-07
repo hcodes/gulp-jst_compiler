@@ -3,11 +3,11 @@ gulp-jst_compiler
 
 A [JST compiler](https://github.com/hcodes/jst) plugin for Gulp
 
-[![NPM version](https://img.shields.io/npm/v/gulp-jst_compile.svg?style=flat)](https://www.npmjs.com/package/gulp-jst_compile)
-[![Build Status](https://img.shields.io/travis/hcodes/gulp-jst_compile.svg?style=flat)](https://travis-ci.org/hcodes/gulp-jst_compile)
-[![Coverage Status](https://img.shields.io/coveralls/hcodes/gulp-jst_compile.svg?style=flat)](https://coveralls.io/r/hcodes/gulp-jst_compile)<br/>
-[![Dependency Status](https://img.shields.io/david/hcodes/gulp-jst_compile.svg)](https://david-dm.org/hcodes/gulp-jst_compile)
-[![devDependency Status](https://img.shields.io/david/dev/hcodes/gulp-jst_compile.svg)](https://david-dm.org/hcodes/gulp-jst_compile#info=devDependencies)
+[![NPM version](https://img.shields.io/npm/v/gulp-jst_compiler.svg?style=flat)](https://www.npmjs.com/package/gulp-jst_compiler)
+[![Build Status](https://img.shields.io/travis/hcodes/gulp-jst_compiler.svg?style=flat)](https://travis-ci.org/hcodes/gulp-jst_compiler)
+[![Coverage Status](https://img.shields.io/coveralls/hcodes/gulp-jst_compiler.svg?style=flat)](https://coveralls.io/r/hcodes/gulp-jst_compiler)<br/>
+[![Dependency Status](https://img.shields.io/david/hcodes/gulp-jst_compiler.svg)](https://david-dm.org/hcodes/gulp-jst_compiler)
+[![devDependency Status](https://img.shields.io/david/dev/hcodes/gulp-jst_compiler.svg)](https://david-dm.org/hcodes/gulp-jst_compiler#info=devDependencies)
 
 ## Install
 
